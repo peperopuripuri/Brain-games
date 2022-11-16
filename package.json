@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
+    "type": "module",
     "url": "git+https://github.com/ayayalice/frontend-project-44.git"
   },
   "author": "Ilya",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ayayalice/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/ayayalice/frontend-project-44#readme"
+  "homepage": "https://github.com/ayayalice/frontend-project-44#readme",
+  "dependencies": {
+    "package.json": "^0.0.0"
+  }
 }
