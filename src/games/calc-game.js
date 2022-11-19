@@ -11,34 +11,34 @@ export const startGame = () => {
         const randomNum4 = Math.floor(Math.random() * 60);
         const randomNum5 = Math.floor(Math.random() * 20);
         const randomNum6 = Math.floor(Math.random() * 30000);
-        const sum = `${randomNum + randomNum2}`
-        const mnoj = `${randomNum3 * randomNum4}`
-        const raznica = `${randomNum5 - randomNum6}`  
+        const sum = `${randomNum + randomNum2}`;
+        const mnoj = `${randomNum3 * randomNum4}`;
+        const raznica = `${randomNum5 - randomNum6}`;  
         const askRandomSum = () => console.log(`Question: ${randomNum} + ${randomNum2}`);
         const askRandomMnoj = () => console.log(`Question: ${randomNum3} * ${randomNum4}`);
         const askRandomRaznica = () => console.log(`Question: ${randomNum5} - ${randomNum6}`);
         askRandomSum();
         const answer = readlineSync.question("Your answer: ");
         if (answer === sum) {
-            console.log('Correct!');
+            console.log("Correct!");
         } else {
             console.log(`"${answer}" is wrong answer ;(. Correct answer is "${sum}".`);
             console.log(`Let"s try again, ${userName}!`);
             break;
         }
-        askRandomMnoj()
+        askRandomMnoj();
         const answer2 = readlineSync.question("Your answer: ");
         if (answer2 === mnoj) {
-            console.log('Correct!');
+            console.log("Correct!");
         } else {
             console.log(`"${answer2}" is wrong answer ;(. Correct answer is "${mnoj}".`);
             console.log(`Let"s try again, ${userName}!`);
             break;
         }
-        askRandomRaznica()
+        askRandomRaznica();
         const answer3 = readlineSync.question("Your answer: ");
         if (answer3 === raznica) {
-            console.log('Correct!');
+            console.log("Correct!");
         } else {
             console.log(`"${answer3}" is wrong answer ;(. Correct answer is "${raznica}".`);
             console.log(`Let"s try again, ${userName}!`);
@@ -46,4 +46,4 @@ export const startGame = () => {
         }
         if (index === 0) console.log(`Congratulations, ${userName}!`);
     }   
-}
+};
