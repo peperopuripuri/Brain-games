@@ -7,7 +7,7 @@ export const theGame = () => {
     for (let index = 0; index < 3; index++) {
         let randomNum = Math.floor(Math.random() * 100);
         let randomNum2 = Math.floor(Math.random() * 100);
-        const gsdRec = function() {
+        const gsdRec = () {
             randomNum = Math.abs(randomNum);
             randomNum2 = Math.abs(randomNum2);
             if (randomNum2 > randomNum) {let temp = randomNum; randomNum = randomNum2; randomNum = temp;}
