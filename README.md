@@ -9,3 +9,5 @@
 [![asciicast](https://asciinema.org/a/538872.svg)](https://asciinema.org/a/538872)
 ### Игра "Арифметическая прогрессия"
 [![asciicast](https://asciinema.org/a/539286.svg)](https://asciinema.org/a/539286)
+### Игра "Простое ли число?"
+[![asciicast](https://asciinema.org/a/539417.svg)](https://asciinema.org/a/539417)
