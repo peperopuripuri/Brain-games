@@ -19,7 +19,7 @@ export const progressionGame = () => {
         const getRandomItem = (arr) => arr.join(" ").replace(item, "..");
         const ask = `${getRandomItem(arr)}`;
         const correct = String(item);
-        return [correct, String(ask)];
+        return [correct, ask];
     };
     engine(rule, test);
 };
