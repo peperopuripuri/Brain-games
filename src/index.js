@@ -7,10 +7,10 @@ export const engine = (rule, test) => {
     console.log(rule);
     for (let index = 0; index < 3; index++) {
         const [correct, ask] = test();
-        console.log(`Question ${ask}`);
+        console.log(`Question: ${ask}`);
         const answer = readlineSync.question("Your answer: ");
         if (answer === correct) {
-            console.log('Correct');
+            console.log('Correct!');
         } else {
             console.log(`"${answer}" is wrong answer ;(. Correct answer is "${correct}".`);
             console.log(`Let"s try again, ${userName}!`);
