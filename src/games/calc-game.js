@@ -4,22 +4,16 @@ export const calcGame = () => {
     const rule = 'What is the result of the expression?';
     const generateRandomMathSymbol = () => {
         let result = '';
-        const symbols = '+-*/';
+        const symbols = '+-*';
         for (let i = 0; i < 1; i++) {
             result += symbols.charAt(Math.floor(Math.random() * symbols.length));
         }
         return result;
     };
     const calculate = (randomNumber, randomNumber2, randomMathSymbol) => {
-        if (randomMathSymbol === '+') {
-           return randomNumber + randomNumber2;
-        } else if (randomMathSymbol === '-') {
-           return randomNumber - randomNumber2;
-        } else if (randomMathSymbol === '*') {
-           return randomNumber * randomNumber2;
-        } else if (randomMathSymbol === '/') {
-           return randomNumber / randomNumber2;
-        }
+        if (randomMathSymbol === '+') {return randomNumber + randomNumber2;}
+        if (randomMathSymbol === '-') {return randomNumber - randomNumber2;}
+        if (randomMathSymbol === '*') {return randomNumber * randomNumber2;}
     };
     const test = () => {
         let randomNumber = randomNum();
