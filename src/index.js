@@ -2,6 +2,7 @@ import readlineSync from "readline-sync";
 
 export const randomNum = () => Math.floor(Math.random() * 100);
 export const engine = (rule, test) => {
+    console.log("Welcome to the Brain Games!");
     const userName = readlineSync.question("May I have your name? ");
     console.log(`Hello ${userName}!`);
     console.log(rule);
@@ -18,5 +19,4 @@ export const engine = (rule, test) => {
         } 
         if (index === 2) console.log(`Congratulations, ${userName}!`);
     }
-
 };
