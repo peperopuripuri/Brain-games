@@ -1,4 +1,4 @@
-import { engine, randomNum } from "../index.js";
+import { engine, randomNum } from '../index.js';
 
 export const calcGame = () => {
     const rule = 'What is the result of the expression?';
