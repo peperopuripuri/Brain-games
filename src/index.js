@@ -4,7 +4,7 @@ export const randomNum = () => Math.floor(Math.random() * 100);
 export const engine = (rule, test) => {
     console.log("Welcome to the Brain Games!");
     const userName = readlineSync.question("May I have your name? ");
-    console.log(`Hello ${userName}!`);
+    console.log(`Hello, ${userName}!`);
     console.log(rule);
     for (let index = 0; index < 3; index++) {
         const [correct, ask] = test();
