@@ -12,14 +12,14 @@ export const progressionGame = () => {
             randomNumber = randomNum();
             randomNumber2 = randomNum();
             arr = arithmeticProgression(randomNumber, randomNumber2);
-        } while (arr.length < 5)
+        } while (arr.length < 5);
         const randomIndex = Math.floor(Math.random() * arr.length);
         const item = arr[randomIndex];
         const getRandomItem = (arr) => arr.join(" ").replace(item, "..");
         getRandomItem(arr);
-        const ask = `${getRandomItem(arr)}`
+        const ask = `${getRandomItem(arr)}`;
         const correct = String(item);
         return [correct, ask];
-    }
+    };
     engine(rule, test);
 };

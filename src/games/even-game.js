@@ -7,6 +7,6 @@ export const evenGame = () => {
         let correct;
         (ask % 2 === 0) ? correct = 'yes' : correct = 'no';
         return [correct, ask];
-    }
+    };
     engine(rule, test);
 };

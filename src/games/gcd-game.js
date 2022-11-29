@@ -10,19 +10,20 @@ export const gcdGame = () => {
             randomNumber = randomNumber2; 
             randomNumber = temp;
         }
-        while (true) {
+        let x = true;
+        while (x) {
             if (randomNumber2 == 0) return randomNumber;
             randomNumber %= randomNumber2;
             if (randomNumber == 0) return randomNumber2;
             randomNumber2 %= randomNumber;
         }
-    }
+    };
     const test = () => {
         let randomNumber = randomNum();
         let randomNumber2 = randomNum();
         const ask = `${randomNumber} ${randomNumber2}`;
         const correct = String(calculateGcd(randomNumber, randomNumber2));
         return [correct, ask];
-    }
+    };
     engine(rule, test);
 };

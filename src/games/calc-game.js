@@ -20,7 +20,7 @@ export const calcGame = () => {
         } else if (randomMathSymbol === '/') {
            return randomNumber / randomNumber2;
         }
-    }
+    };
     const test = () => {
         let randomNumber = randomNum();
         let randomNumber2 = randomNum();
@@ -28,6 +28,6 @@ export const calcGame = () => {
         const ask = `${randomNumber} ${randomMathSymbol} ${randomNumber2}`;
         const correct = String(calculate(randomNumber, randomNumber2, randomMathSymbol));
         return [correct, ask];
-    }
+    };
     engine(rule, test);
 };

@@ -15,6 +15,6 @@ export const primeGame = () => {
         isPrime === true ? isPrime = "yes" : isPrime = "no";
         const correct = isPrime;
         return [correct, ask];
-    }
+    };
     engine(rule, test);
 };
