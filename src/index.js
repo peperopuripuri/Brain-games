@@ -14,7 +14,7 @@ export const engine = (rule, test) => {
             console.log('Correct!');
         } else {
             console.log(`"${answer}" is wrong answer ;(. Correct answer is "${correct}".`);
-            console.log(`Let"s try again, ${userName}!`);
+            console.log(`Let's try again, ${userName}!`);
             break;    
         } 
         if (index === 2) console.log(`Congratulations, ${userName}!`);
