@@ -8,11 +8,14 @@ export const progressionGame = () => {
         if (randomNumber === randomNumber2) randomNumber = randomNum();
         const arithmeticProgression  = (n, lim) => Array.from({ length: Math.ceil(lim / n) }, (_, i) => (i + 1) * n );
         let arr = arithmeticProgression(randomNumber, randomNumber2);
+        if (arr.length === 2) arr = arithmeticProgression(randomNumber, randomNumber2);
+        console.log(arr);
         do {
             randomNumber = randomNum();
             randomNumber2 = randomNum();
             arr = arithmeticProgression(randomNumber, randomNumber2);
         } while (arr.length < 5);
+        console.log(arr);
         const randomIndex = Math.floor(Math.random() * arr.length);
         const item = arr[randomIndex];
         const getRandomItem = (arr) => arr.join(" ").replace(item, "..");
