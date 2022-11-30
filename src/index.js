@@ -18,6 +18,6 @@ export const engine = (rule, test) => {
       console.log(`Let's try again, ${userName}!`);
       break;
     }
-  }
   if (index === 2) console.log(`Congratulations, ${userName}!`);
+  }
 };
