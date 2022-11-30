@@ -6,7 +6,8 @@ export const engine = (rule, test) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(rule);
-  for (let index = 0; index < 3; index + 1) {
+  let index;
+  for (index = 0; index < 3; index++) {
     const [correct, ask] = test();
     console.log(`Question: ${ask}`);
     const answer = readlineSync.question('Your answer: ');
@@ -17,6 +18,6 @@ export const engine = (rule, test) => {
       console.log(`Let's try again, ${userName}!`);
       break;
     }
-    if (index === 2) console.log(`Congratulations, ${userName}!`);
   }
+  if (index === 2) console.log(`Congratulations, ${userName}!`);
 };
