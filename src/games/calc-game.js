@@ -5,7 +5,7 @@ const calcGame = () => {
   const generateRandomMathSymbol = () => {
     let result = '';
     const symbols = '+-*';
-    for (let i = 0; i < 1; i + 1) {
+    for (let i = 0; i < 1; i++) {
       result += symbols.charAt(Math.floor(Math.random() * symbols.length));
     }
     return result;
