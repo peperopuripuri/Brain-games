@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import holla from '../src/cli.js';
+import sayHolla from '../src/cli.js';
 
-holla();
+sayHolla();

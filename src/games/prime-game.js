@@ -1,21 +1,27 @@
-import { engine, randomNum } from '../index.js';
+import engine from '../index.js';
+import randomNum from '../helpers.js';
 
-const primeGame = () => {
-  const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const test = () => {
-    const randomNumber = randomNum();
-    const ask = `${randomNumber}`;
-    let isPrime = true;
-    for (let i = 2; i < randomNumber; i + 1) {
-      if (randomNumber % i === 0) {
-        isPrime = false;
-        break;
-      }
+const mainRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const isPrime = (randomNumber) => {
+  let prime = true;
+  for (let i = 2; i < randomNumber; i++) {
+    if (randomNumber % i === 0) {
+      prime = false;
+      break;
     }
-    isPrime === true ? isPrime = 'yes' : isPrime = 'no';
-    const correct = isPrime;
-    return [correct, ask];
-  };
-  engine(rule, test);
+  }
+  prime === true ? prime = 'yes' : prime = 'no';
+  return prime;
+}
+
+const verify = () => {
+  const randomNumber = randomNum();
+  const mainQuestion = `${randomNumber}`;
+  const correctAnswer = isPrime(randomNumber);
+  return [correctAnswer, mainQuestion];
 };
-export default primeGame;
+
+export default () => {
+  engine(mainRule, verify);
+};

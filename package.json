@@ -25,8 +25,6 @@
   },
   "homepage": "https://github.com/ayayalice/frontend-project-44#readme",
   "dependencies": {
-    "mathjs": "^11.4.0",
-    "package.json": "^0.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
