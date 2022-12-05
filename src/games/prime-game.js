@@ -11,7 +11,13 @@ const isPrime = (randomNumber) => {
       break;
     }
   }
-  return prime === true ? prime = 'yes' : prime = 'no';
+  if (prime === true) {
+    prime = 'yes';
+  } else {
+    prime = 'no';
+  }
+  
+  return prime;
 };
 
 const verify = () => {

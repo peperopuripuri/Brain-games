@@ -4,8 +4,6 @@ import randomNum from '../helpers.js';
 const mainRule = 'What number is missing in the progression?';
 
 const makeProgression = (a, b) => {
-  a = randomNum();
-  b = randomNum();
   if (a === b) a = randomNum();
   if (a === 0 || b === 0) a = randomNum();
 
@@ -13,8 +11,8 @@ const makeProgression = (a, b) => {
 };
 
 const verify = () => {
-  let a;
-  let b;
+  let a = randomNum();
+  let b = randomNum();
   let progressionArr = makeProgression(a, b);
   do {
     a = randomNum();

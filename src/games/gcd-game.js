@@ -20,9 +20,10 @@ const calculateGcd = (randomNumber, randomNumber2) => {
   }
   return `${randomNumber} ${randomNumber2}`;
 };
+
 const verify = () => {
-  const randomNumber = randomNum();
-  const randomNumber2 = randomNum();
+  let randomNumber = randomNum();
+  let randomNumber2 = randomNum();
   const mainQuestion = `${randomNumber} ${randomNumber2}`;
   const correctAnswer = String(calculateGcd(randomNumber, randomNumber2));
   return [correctAnswer, mainQuestion];
