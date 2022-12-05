@@ -5,14 +5,13 @@ const mainRule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 const isPrime = (randomNumber) => {
   let prime = true;
-  for (let i = 2; i < randomNumber; i++) {
+  for (let i = 2; i < randomNumber; i += 1) {
     if (randomNumber % i === 0) {
       prime = false;
       break;
     }
   }
-  prime === true ? prime = 'yes' : prime = 'no';
-  return prime;
+  return prime === true ? prime = 'yes' : prime = 'no';
 };
 
 const verify = () => {

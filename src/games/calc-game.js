@@ -3,9 +3,10 @@ import randomNum from '../helpers.js';
 
 const mainRule = 'What is the result of the expression?';
 const calculate = (randomNumber, randomNumber2, randomOperator) => {
-  if (randomOperator === '+') { return randomNumber + randomNumber2; }
-  if (randomOperator === '-') { return randomNumber - randomNumber2; }
-  if (randomOperator === '*') { return randomNumber * randomNumber2; }
+  if (randomOperator === '+') return randomNumber + randomNumber2;
+  if (randomOperator === '-') return randomNumber - randomNumber2;
+  if (randomOperator === '*') return randomNumber * randomNumber2;
+  return '';
 };
 
 const operators = ['+', '-', '*'];

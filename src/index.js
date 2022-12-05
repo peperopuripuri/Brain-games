@@ -6,7 +6,7 @@ const engine = (mainRule, verify) => {
   console.log(`Hello, ${userName}!`);
   console.log(mainRule);
   let index;
-  for (index = 0; index < 3; index++) {
+  for (index = 0; index < 3; index += 1) {
     const [correctAnswer, mainQuestion] = verify();
     console.log(`Question: ${mainQuestion}`);
     const answer = readlineSync.question('Your answer: ');
