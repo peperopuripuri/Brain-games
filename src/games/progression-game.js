@@ -3,7 +3,9 @@ import randomNum from '../helpers.js';
 
 const mainRule = 'What number is missing in the progression?';
 
-const makeProgression = (a, b) => {
+const makeProgression = (num1, num2) => {
+  let a = num1;
+  const b = num2;
   if (a === b) a = randomNum();
   if (a === 0 || b === 0) a = randomNum();
 

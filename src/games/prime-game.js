@@ -16,7 +16,6 @@ const isPrime = (randomNumber) => {
   } else {
     prime = 'no';
   }
-  
   return prime;
 };
 
