@@ -18,6 +18,7 @@ const makeProgression = (num1) => {
 const generateGameVariables = () => {
   const a = randomNum();
   const progressionArr = makeProgression(a);
+  
   const randomIndex = Math.floor(Math.random() * progressionArr.length);
   const item = progressionArr[randomIndex];
   const userAnswer = () => progressionArr.join(' ').replace(item, '..');
