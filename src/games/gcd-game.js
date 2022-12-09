@@ -23,7 +23,7 @@ const calculateGcd = (a, b) => {
   return `${randomNumber} ${randomNumber2}`;
 };
 
-const verify = () => {
+const generateGameVariables = () => {
   const randomNumber = randomNum();
   const randomNumber2 = randomNum();
   const mainQuestion = `${randomNumber} ${randomNumber2}`;
@@ -32,5 +32,5 @@ const verify = () => {
 };
 
 export default () => {
-  engine(mainRule, verify);
+  engine(mainRule, generateGameVariables);
 };

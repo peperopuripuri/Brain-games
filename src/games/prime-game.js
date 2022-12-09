@@ -19,7 +19,7 @@ const isPrime = (randomNumber) => {
   return prime;
 };
 
-const verify = () => {
+const generateGameVariables = () => {
   const randomNumber = randomNum();
   const mainQuestion = `${randomNumber}`;
   const correctAnswer = isPrime(randomNumber);
@@ -27,5 +27,5 @@ const verify = () => {
 };
 
 export default () => {
-  engine(mainRule, verify);
+  engine(mainRule, generateGameVariables);
 };

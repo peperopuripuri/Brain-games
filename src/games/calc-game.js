@@ -3,15 +3,22 @@ import randomNum from '../helpers.js';
 
 const mainRule = 'What is the result of the expression?';
 const calculate = (randomNumber, randomNumber2, randomOperator) => {
-  if (randomOperator === '+') return randomNumber + randomNumber2;
-  if (randomOperator === '-') return randomNumber - randomNumber2;
-  if (randomOperator === '*') return randomNumber * randomNumber2;
+  switch (randomOperator) {
+    case '+':
+      return randomNumber + randomNumber2;
+    case '-':
+      return randomNumber - randomNumber2;
+    case '*':
+      return randomNumber * randomNumber2;
+    default:
+      break;
+  }
   return '';
 };
 
 const operators = ['+', '-', '*'];
 
-const verify = () => {
+const generateGameVariables = () => {
   const randomOperator = operators[Math.floor(Math.random() * operators.length)];
   const randomNumber = randomNum();
   const randomNumber2 = randomNum();
@@ -21,5 +28,5 @@ const verify = () => {
 };
 
 export default () => {
-  engine(mainRule, verify);
+  engine(mainRule, generateGameVariables);
 };
