@@ -20,11 +20,11 @@ const generateGameVariables = () => {
   const n = randomNum();
   const progressionArr = makeProgression(n);
   const randomIndex = Math.floor(Math.random() * progressionArr.length);
-  const item = progressionArr[randomIndex];
-  const userAnswer = () => progressionArr.join(' ').replace(item, '..');
+  const userAnswer = progressionArr[randomIndex];
+  const hideUserAnswer = () => progressionArr.join(' ').replace(userAnswer, '..');
 
-  const mainQuestion = `${userAnswer()}`;
-  const correctAnswer = String(item);
+  const mainQuestion = `${hideUserAnswer()}`;
+  const correctAnswer = String(userAnswer);
   return [correctAnswer, mainQuestion];
 };
 
