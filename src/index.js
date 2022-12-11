@@ -5,8 +5,8 @@ const engine = (mainRule, generateGameVariables) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(mainRule);
-  const length = 3;
-  for (let index = 0; index < length; index += 1) {
+  const countRounds = 3;
+  for (let index = 0; index < countRounds; index += 1) {
     const [correctAnswer, mainQuestion] = generateGameVariables();
     console.log(`Question: ${mainQuestion}`);
     const answer = readlineSync.question('Your answer: ');

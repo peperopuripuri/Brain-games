@@ -24,8 +24,8 @@ const calculateGcd = (a, b) => {
 };
 
 const generateGameVariables = () => {
-  const randomNumber = randomNum();
-  const randomNumber2 = randomNum();
+  const randomNumber = randomNum(1, 100);
+  const randomNumber2 = randomNum(1, 100);
   const mainQuestion = `${randomNumber} ${randomNumber2}`;
   const correctAnswer = String(calculateGcd(randomNumber, randomNumber2));
   return [correctAnswer, mainQuestion];

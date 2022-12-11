@@ -20,7 +20,7 @@ const isPrime = (randomNumber) => {
 };
 
 const generateGameVariables = () => {
-  const randomNumber = randomNum();
+  const randomNumber = randomNum(1, 100);
   const mainQuestion = `${randomNumber}`;
   const correctAnswer = isPrime(randomNumber);
   return [correctAnswer, mainQuestion];
