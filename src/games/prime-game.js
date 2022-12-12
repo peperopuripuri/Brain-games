@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import randomNum from '../helpers.js';
+import generateRandomNum from '../helpers.js';
 
 const mainRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -13,22 +13,15 @@ const isPrime = (randomNumber) => {
       break;
     }
   }
-  if (prime === true) {
-    prime = 'yes';
-  } else {
-    prime = 'no';
-  }
 
   return prime;
 };
 
 const generateGameVariables = () => {
-  const randomNumber = randomNum(-30, 100);
+  const randomNumber = generateRandomNum(-30, 100);
   const mainQuestion = `${randomNumber}`;
-  const correctAnswer = isPrime(randomNumber);
+  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   return [correctAnswer, mainQuestion];
 };
 
-export default () => {
-  engine(mainRule, generateGameVariables);
-};
+export default () => engine(mainRule, generateGameVariables);

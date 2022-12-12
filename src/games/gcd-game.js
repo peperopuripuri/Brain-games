@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import randomNum from '../helpers.js';
+import generateRandomNum from '../helpers.js';
 
 const mainRule = 'Find the greatest common divisor of given numbers.';
 
@@ -20,17 +20,15 @@ const calculateGcd = (a, b) => {
     if (randomNumber === 0) return randomNumber2;
     randomNumber2 %= randomNumber;
   }
-  return `${randomNumber} ${randomNumber2}`;
+  return randomNumber;
 };
 
 const generateGameVariables = () => {
-  const randomNumber = randomNum(1, 100);
-  const randomNumber2 = randomNum(1, 100);
+  const randomNumber = generateRandomNum(1, 100);
+  const randomNumber2 = generateRandomNum(1, 100);
   const mainQuestion = `${randomNumber} ${randomNumber2}`;
   const correctAnswer = String(calculateGcd(randomNumber, randomNumber2));
   return [correctAnswer, mainQuestion];
 };
 
-export default () => {
-  engine(mainRule, generateGameVariables);
-};
+export default () => engine(mainRule, generateGameVariables);

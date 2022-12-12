@@ -1,12 +1,11 @@
 import engine from '../index.js';
-import randomNum from '../helpers.js';
+import generateRandomNum from '../helpers.js';
 
 const mainRule = 'What number is missing in the progression?';
 
-const makeProgression = (numb) => {
+const makeProgression = (numb, length) => {
   let n = numb;
   const result = [];
-  const length = randomNum(10, 20);
   for (let i = 1; length - i; i += 1) {
     n += length;
     result.push(n);
@@ -15,17 +14,17 @@ const makeProgression = (numb) => {
 };
 
 const generateGameVariables = () => {
-  const n = randomNum(1, 100);
-  const progressionArr = makeProgression(n);
-  const randomIndex = Math.floor(Math.random() * progressionArr.length);
-  const userAnswer = progressionArr[randomIndex];
-  const hideUserAnswer = () => progressionArr.join(' ').replace(userAnswer, '..');
+  const n = generateRandomNum(1, 100);
+  const length = generateRandomNum(10, 20);
 
-  const mainQuestion = `${hideUserAnswer()}`;
+  const progressionArr = makeProgression(n, length);
+  const randomIndex = generateRandomNum(1, progressionArr.length);
+  const userAnswer = progressionArr[randomIndex];
+  const hidenUserAnswer = progressionArr.join(' ').replace(userAnswer, '..');
+
+  const mainQuestion = `${hidenUserAnswer}`;
   const correctAnswer = String(userAnswer);
   return [correctAnswer, mainQuestion];
 };
 
-export default () => {
-  engine(mainRule, generateGameVariables);
-};
+export default () => engine(mainRule, generateGameVariables);
