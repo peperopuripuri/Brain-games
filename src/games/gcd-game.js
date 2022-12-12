@@ -6,20 +6,19 @@ const mainRule = 'Find the greatest common divisor of given numbers.';
 const calculateGcd = (a, b) => {
   let randomNumber = a;
   let randomNumber2 = b;
-  randomNumber = Math.abs(randomNumber);
-  randomNumber2 = Math.abs(randomNumber2);
-  if (randomNumber2 > randomNumber) {
+
+  if (randomNumber < randomNumber2) {
     const temp = randomNumber;
     randomNumber = randomNumber2;
+    randomNumber2 = temp;
+  }
+
+  while (randomNumber2 !== 0) {
+    const temp = randomNumber2;
+    randomNumber2 = randomNumber % randomNumber2;
     randomNumber = temp;
   }
-  const x = true;
-  while (x) {
-    if (randomNumber2 === 0) return randomNumber;
-    randomNumber %= randomNumber2;
-    if (randomNumber === 0) return randomNumber2;
-    randomNumber2 %= randomNumber;
-  }
+
   return randomNumber;
 };
 
