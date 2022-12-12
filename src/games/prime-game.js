@@ -5,6 +5,8 @@ const mainRule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 const isPrime = (randomNumber) => {
   let prime = true;
+  if (randomNumber < 2) prime = false;
+
   for (let i = 2; i < randomNumber; i += 1) {
     if (randomNumber % i === 0) {
       prime = false;
@@ -16,11 +18,12 @@ const isPrime = (randomNumber) => {
   } else {
     prime = 'no';
   }
+
   return prime;
 };
 
 const generateGameVariables = () => {
-  const randomNumber = randomNum(1, 100);
+  const randomNumber = randomNum(-30, 100);
   const mainQuestion = `${randomNumber}`;
   const correctAnswer = isPrime(randomNumber);
   return [correctAnswer, mainQuestion];
