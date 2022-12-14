@@ -3,11 +3,11 @@ import generateRandomNum from '../helpers.js';
 
 const mainRule = 'What number is missing in the progression?';
 
-const makeProgression = (numb, length) => {
+const makeProgression = (numb, length, count) => {
   let n = numb;
   const result = [];
   for (let i = 1; length - i; i += 1) {
-    n += length;
+    n += count;
     result.push(n);
   }
   return result;
@@ -16,11 +16,12 @@ const makeProgression = (numb, length) => {
 const generateGameVariables = () => {
   const n = generateRandomNum(1, 100);
   const length = generateRandomNum(10, 20);
+  const count = generateRandomNum(10, 20);
 
-  const progressionArr = makeProgression(n, length);
-  const randomIndex = generateRandomNum(1, progressionArr.length);
-  const userAnswer = progressionArr[randomIndex];
-  const hidenUserAnswer = progressionArr.join(' ').replace(userAnswer, '..');
+  const progression = makeProgression(n, length, count);
+  const randomIndex = generateRandomNum(1, progression.length);
+  const userAnswer = progression[randomIndex];
+  const hidenUserAnswer = progression.join(' ').replace(userAnswer, '..');
 
   const mainQuestion = `${hidenUserAnswer}`;
   const correctAnswer = String(userAnswer);
